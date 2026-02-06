@@ -29,7 +29,8 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-
+        working-directory: MAAJABU.EATS
+        
       - name: Build
         run: npm run build
 
@@ -39,7 +40,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: MAAJABU.EATS/dist
+ 
 
   deploy:
     environment:
